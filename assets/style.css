@@ -1,0 +1,113 @@
+
+
+ body {
+    background-color:rgba(19, 62, 0, 0.463)
+   
+ }
+
+ 
+ #cardPriority {
+    width:600px;
+    height: 780px;
+    border-radius: 20px;
+ }
+
+ .card-header{
+    background-color: rgb(37, 37, 37);
+   
+ }
+
+ #placar {
+    background-color: rgb(92, 92, 92);
+    height: 100px;
+ }
+
+ #placar .card {
+    width: 450px;
+
+ }
+
+ .label {
+    border-radius: 10px;
+    width: 60px;
+    padding: 5px;
+    color:  var(--white);
+    text-align: center;
+    position: absolute;
+ }
+
+ .bgGreen {
+    background-color: green;
+    right: 90%;
+ }
+
+ .bgRed {
+    background-color: red;
+    right: -3%;
+ }
+
+ #selectAction {
+    background-color: rgb(70, 70, 70);
+    height: 280px;
+    
+ }
+
+ .buttons {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+ }
+
+.buttons img{
+   width: 110px;
+   height: 180px;
+   object-fit: cover;
+   border-radius: 20px;
+    
+}
+
+label {
+    position: relative;
+}
+
+.btn {
+    
+    
+   border: 5px solid black;
+    padding: 0;
+    border-radius: 23px;
+    cursor: pointer;
+    
+}
+
+[type=radio]{
+    position: absolute;
+    left: 0;
+    opacity: 0%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+[type=radio]:checked + button {
+    border-color: green;
+    transition: transform 0.3s;
+    transform: scale(0.9);
+}
+
+#divJogarBtn {
+    background-color:rgb(37, 37, 37);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#buttonJogar {
+    width: 250px;
+    border: 2px solid white;
+    background-color: green;
+}
+
+#divImg {
+    height: 255px;
+}
