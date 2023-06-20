@@ -11,6 +11,7 @@ const contCpuTarget = document.getElementById("contCpu");
 const mainTarget = document.getElementById("cardPriority");
 const mainWinner = document.getElementById("cardPriorityWinner");
 const mainLooser = document.getElementById("cardPriorityLooser");
+const checkedTarget = document.getElementById("checked");
 //Pensar em criar elementos tela vencedor e perdedor
 // const imgUser = document.getElementById("");
 // const imgUser = document.getElementById("");
@@ -64,9 +65,13 @@ function playCpu() {
   playerCpu = opt[num];
   imgCpu.innerHTML = `<img src='./assets/images/icons/${playerCpu}.png' width='120px''>`;
   analyze();
+  
 }
 
+
+
 function analyze() {
+  btnPlay.disabled = true;
   let win = "0";
   //variaveis do jogo
   // 0 = empate
@@ -91,19 +96,26 @@ function analyze() {
   contYouTarget.innerHTML = contYou;
   contCpuTarget.innerHTML = contCpu;
 
-  //   setTimeout(() => {
-  //     btnPlay.disabled = false;
-  //     clear();
-  //   }, 3000);
+    setTimeout(() => {
+      btnPlay.disabled = false;
+      reset();
+    }, 2000);
+
+    
+
 
   if (contYou >= 5) {
-    removeMain();
-    aparecerWinner();
+    setTimeout(() => {
+      removeMain();
+      aparecerWinner();
+    }, 2000);
   }
 
   else if (contCpu >= 5) {
+    setTimeout(() => {
     removeMain();
     aparecerLooser();
+     }, 2000);
   }
 }
 
