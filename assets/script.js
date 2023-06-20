@@ -11,10 +11,7 @@ const contCpuTarget = document.getElementById("contCpu");
 const mainTarget = document.getElementById("cardPriority");
 const mainWinner = document.getElementById("cardPriorityWinner");
 const mainLooser = document.getElementById("cardPriorityLooser");
-const checkedTarget = document.getElementById("checked");
-//Pensar em criar elementos tela vencedor e perdedor
-// const imgUser = document.getElementById("");
-// const imgUser = document.getElementById("");
+
 
 //Variaveis de elementos
 var playerYou = "";
@@ -53,10 +50,11 @@ function again() {
   location.reload();
 }
 
+
 function reset() {
   playerYou = document.querySelector('input[name="play"]:checked').value;
   imgYou.innerHTML = `<img src='./assets/images/icons/${playerYou}.png' width='120px''>`;
-  imgCpu.innerHTML = "";
+  
 }
 
 function playCpu() {
@@ -98,7 +96,7 @@ function analyze() {
 
     setTimeout(() => {
       btnPlay.disabled = false;
-      reset();
+      clear();
     }, 2000);
 
     
@@ -120,6 +118,5 @@ function analyze() {
 }
 
 function clear() {
-  imgYou.innerHTML = "";
   imgCpu.innerHTML = "";
 }
